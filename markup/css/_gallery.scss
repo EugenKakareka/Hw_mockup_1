@@ -1,0 +1,59 @@
+.gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    @media (min-Width: 768px) {
+        margin-top: 200px;
+    }
+}
+
+.gallery-item {
+    width: 50%;
+    padding-top: 50%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &::after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $btn-bg;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+    &:hover {
+        &::after {
+            opacity: 0.8;
+            visibility: visible;
+        }
+        a {
+            opacity: 1;
+        }
+    }
+    @media (min-Width: 768px) {
+        width: 25%;
+        padding-top: 25%;
+    }
+    a {
+        position: absolute;
+        display: inline-block;
+        @extend %centerblock;
+        width: 48px;
+        height: 48px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 55px;
+        background: $main-bg-color;
+        border-radius: 24px;
+        text-align: center;
+        z-index: 10;
+        opacity: 0;
+        transition: .5s;
+    }
+}

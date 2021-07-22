@@ -1,0 +1,107 @@
+.shop {
+    background-image: url('../images/bg-03.jpg');
+    background-image: url(../images/bg-03.jpg);
+    background-size: cover;
+    background-position: bottom 0 right -292px;
+    background-repeat: no-repeat;
+    @media (min-width: 768px) {
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+    .cards {
+        @media (min-width: 768px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -15px -30px;
+        }
+    }
+    .cards-item {
+        @media (min-width: 768px) {
+            width: 50%;
+            padding: 0 15px 30px
+        }
+        @media (min-width: 992px) {
+            width: calc(100%/3);
+        }
+    }
+    .card {
+        margin: 15px 0;
+        width: 100%;
+        text-align: center;
+        border-radius: 10px;
+        background: $main-bg-color;
+        box-shadow: 6px 6px 50px 0px rgba(0, 0, 0, 0.1);
+        &__head {
+            padding: 50px 0;
+            background-color: $title-color;
+            color: $title-color-light;
+            text-transform: uppercase;
+            border-radius: 10px 10px 0 0;
+            span:first-child {
+                font-size: 32px;
+                font-weight: 700;
+                position: relative;
+                top: -11px;
+                right: 15px;
+            }
+            span:last-child {
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .price {
+                font-size: 68px;
+                font-weight: 700;
+            }
+        }
+        &__body {
+            padding: 35px 0;
+            @media (min-width: 768px) {
+                padding: 50px 0;
+            }
+            p {
+                margin: 0;
+                position: relative;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+                color: $text-color;
+            }
+            p+p {
+                padding-top: 24px;
+                @media (min-width: 768px) {
+                    padding-top: 50px;
+                }
+            }
+            p+p::before {
+                position: absolute;
+                content: '';
+                left: 50%;
+                top: 25%;
+                width: 99px;
+                height: 1px;
+                transform: translateX(-50%);
+                background: $underline;
+            }
+        }
+        &__btn {
+            margin-top: 35px;
+            width: 170px;
+            height: 50px;
+            background-color: $btn-bg;
+            border-radius: 20px;
+            border: none;
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 600;
+            color: $text-color-light;
+            transition: .3s;
+            @media (min-width: 768px) {
+                margin-top: 50px;
+            }
+            &:hover {
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+            }
+        }
+    }
+}

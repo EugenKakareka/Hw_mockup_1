@@ -1,0 +1,98 @@
+.program {
+    padding-top: 15px;
+    .title {
+        text-align: center;
+        @media (min-width: 768px) {
+            margin-bottom: 75px;
+        }
+        h2 {
+            margin: 0 0 6px;
+            font-size: 30px;
+            line-height: 45px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $title-color;
+        }
+        h3 {
+            margin: 0 0 10px;
+            font-size: 41px;
+            line-height: 61px;
+            color: $subtitle;
+            font-family: 'freestyle';
+        }
+    }
+}
+
+.program .container {
+    @media (min-width: 768px) {
+        padding-top: 125px;
+    }
+    .cards-item {
+        width: 100%;
+        padding: 0 15px 25px;
+        @media (min-width: 576px) {
+            flex-basis: 50%;
+        }
+    }
+    .card {
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+        &__img {
+            width: 100%;
+            padding-top: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            @media (min-width: 768px) {
+                width: 47%;
+                padding-top: 65%;
+            }
+        }
+        &__body {
+            padding: 30px;
+            @media (min-width: 576px) {
+                padding: 15px 15px 15px 30px;
+            }
+            @media (min-width:768px) {
+                width: 53%;
+                padding: 30px 15px 15px 30px;
+            }
+            @media (min-width:992px) {
+                padding: 50px;
+            }
+        }
+        &__title {
+            margin: 0 0 25px;
+            font-size: 20px;
+            line-height: 45px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $card-title;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+            color: $text-color;
+        }
+        &__link {
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 22px;
+            font-weight: 400;
+            color: $card-link;
+            &:hover {
+                color: $text-color-hover;
+            }
+        }
+        @media (min-width:768px) {
+            display: flex;
+            height: 100%;
+        }
+    }
+    .cards {
+        @media (min-width: 576px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

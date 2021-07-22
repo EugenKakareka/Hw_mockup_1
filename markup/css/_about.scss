@@ -1,0 +1,65 @@
+.about .container {
+    @media (min-width: 768px) {
+        padding: 175px 0;
+        display: flex;
+    }
+}
+
+.about-body {
+    padding: 25px;
+    h2 {
+        margin-top: 26px;
+        margin-bottom: 30px;
+        font-size: 30px;
+        line-height: 45px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $title-color;
+    }
+    p {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+        color: $text-color;
+    }
+    @media (min-width:768px) {
+        width: 50%;
+    }
+}
+
+.about-slider {
+    @media (min-width: 768px) {
+        width: 50%;
+    }
+}
+
+.swiper-slide {
+    padding: 35px;
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.swiper-container {
+    .swiper-wrapper {
+        align-items: center;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: $main-bg-color;
+        border-radius: 25px;
+        box-shadow: 6px 6px 9px 0px rgba(0, 0, 0, 0.1);
+        transition: .3s;
+        &:hover {
+            opacity: 0.8;
+        }
+        &::after {
+            font-size: 18px;
+            color: $violet;
+        }
+    }
+}

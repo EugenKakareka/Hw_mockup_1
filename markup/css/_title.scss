@@ -1,0 +1,123 @@
+section.title {
+    position: relative;
+    background: url('../images/bg-01.jpg');
+    background-position: center;
+    background-size: cover;
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $bg-filter;
+        opacity: .8;
+    }
+}
+
+.title-container {
+    width: 100%;
+    padding: 40px 15px;
+    position: relative;
+    z-index: 10;
+    .form {
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 45px;
+        }
+    }
+    form {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 40px 30px 35px;
+        margin: 0 auto;
+        background: $main-bg-color;
+        box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.15);
+        @media (min-width: 768px) {
+            margin: 0;
+        }
+        h2 {
+            margin: 0 0 28px;
+            font-size: 26px;
+            line-height: 1.2;
+            font-weight: 600;
+            color: $title-color;
+        }
+        .btn {
+            margin-top: 15px;
+            margin-left: auto;
+            margin-bottom: 0;
+            max-width: 170px;
+            background: $btn-bg;
+            color: $text-color-light;
+            font-weight: 700;
+            font-size: 16px;
+            transition: .3s;
+            &:hover {
+                box-shadow: 3px 3px 5px rgba(0, 0, 0, .5);
+            }
+        }
+    }
+    select,
+    input {
+        display: block;
+        width: 100%;
+        border-radius: 6px;
+        background: $input-bg;
+        color: $placeholder;
+        font-size: 14px;
+        line-height: 1.2;
+        padding: 16px 10px;
+        height: 50px;
+        border: 0;
+        box-shadow: none;
+        margin-bottom: 17px;
+    }
+    select {
+        margin-bottom: 30px;
+    }
+    @media (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 15px;
+    }
+    .title-body {
+        width: 100%;
+        padding: 30px 20px 25px;
+        text-align: center;
+        @media (min-width: 768px) {
+            width: 50%;
+            text-align: left;
+            padding-left: 45px;
+        }
+        h1 {
+            margin: 0 0 18px;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 1.5;
+            color: $title-color-light;
+            @media (min-width: 768px) {
+                font-size: 48px;
+            }
+        }
+        h2 {
+            margin: 0;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 1.2;
+            font-family: 'freestyle';
+            color: $title-color-light;
+            @media (min-width: 768px) {
+                font-size: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+body {
+    font-family: 'open-sans', sans-serif;
+}
+
+#wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.container {
+    padding: 0 15px;
+    @media (min-width: 768px) {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}
